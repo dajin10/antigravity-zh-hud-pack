@@ -1,0 +1,26 @@
+{
+  "name": "antigravity-zh-hud-pack",
+  "version": "2.3.0",
+  "description": "Antigravity 客户端中英双语/全量简体中文汉化 + 实时算力/Token/模型配额监控底栏 (HUD V2.3，适配 Antigravity 2.35.0+) + 全局文件拖拽增强拓展包",
+  "scripts": {
+    "install-patch": "node bin/install.js",
+    "uninstall-patch": "node bin/uninstall.js",
+    "check-syntax": "node -e \"const fs=require('fs'); for(const f of ['stats-bridge.js','i18n-engine.js','file-drop-enhancer.js','hud-v2.js']) { require('child_process').execFileSync('node',['--check','src/'+f],{stdio:'inherit'}); } console.log('All src modules syntax OK');\""
+  },
+  "keywords": [
+    "antigravity",
+    "i18n",
+    "chinese",
+    "hud",
+    "token-monitor",
+    "quota",
+    "electron-patch"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@electron/asar": "^3.2.14"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
